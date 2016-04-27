@@ -13,5 +13,4 @@ public class HelloResource {
 	public String sayHello() {
 		return "Hello Jersey";
 	}
-//Test
 }
