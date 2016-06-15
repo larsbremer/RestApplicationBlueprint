@@ -1,4 +1,4 @@
-package rest;
+package com.larsbremer.tempsub.model;
 
 public class Datastore {
 

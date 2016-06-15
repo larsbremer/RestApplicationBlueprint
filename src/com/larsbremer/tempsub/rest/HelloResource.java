@@ -1,11 +1,14 @@
-package rest;
+package com.larsbremer.tempsub.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import io.swagger.annotations.Api;
+
 @Path("/hello")
+@Api(value = "/people", description = "Manage people")
 public class HelloResource {
 
 	@GET
