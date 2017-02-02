@@ -15,14 +15,14 @@
       <param-value>
 	            io.swagger.jaxrs.json,
 	            io.swagger.jaxrs.listing,
-	            com.larsbremer.tempsub.rest
+	            com.larsbremer.blueprint.rest
 	        </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet>
     <servlet-name>SwaggerBootstrap</servlet-name>
-    <servlet-class>com.larsbremer.tempsub.rest.Bootstrap</servlet-class>
+    <servlet-class>com.larsbremer.blueprint.Bootstrap</servlet-class>
     <load-on-startup>3</load-on-startup>
   </servlet>
   <servlet-mapping>

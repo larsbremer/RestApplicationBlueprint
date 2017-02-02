@@ -1,4 +1,4 @@
-package com.larsbremer.tempsub.rest;
+package com.larsbremer.blueprint;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
