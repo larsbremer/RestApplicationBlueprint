@@ -8,6 +8,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import com.larsbremer.blueprint.model.PojoObject;
 
 import io.swagger.annotations.Api;
@@ -15,6 +18,8 @@ import io.swagger.annotations.Api;
 @Path("/hello")
 @Api(value = "/hello", description = "Manage people")
 public class HelloResource {
+
+	private static final Logger logger = LogManager.getLogger(HelloResource.class);
 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
@@ -29,6 +34,7 @@ public class HelloResource {
 
 		System.out.println("Current field: " + pojoObj.getField());
 		pojoObj.setField(42);
+		logger.info("Resetted pojo field.");
 		return Response.ok(pojoObj).build();
 	}
 }
