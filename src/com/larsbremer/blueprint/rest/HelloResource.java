@@ -27,6 +27,15 @@ public class HelloResource {
 		return "Hello Jersey";
 	}
 
+	@GET
+	@Path("/json")
+	@Produces(MediaType.APPLICATION_JSON)
+	public PojoObject json() {
+		PojoObject obj = new PojoObject();
+		obj.setField(42);
+		return obj;
+	}
+
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
